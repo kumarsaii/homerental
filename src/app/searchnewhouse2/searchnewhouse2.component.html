@@ -1,0 +1,36 @@
+<div class="container">
+
+<input type="text" name="search" placeholder="search" [(ngModel)]="searchTerm">
+
+<table  class="table table-striped" border="3"  >
+    <th>name</th>
+    <th>Email</th>
+    <th>mobile</th>
+    <th>house</th>
+    <th>location</th>
+    <th>rent</th>
+    <th> Ur Responce</th>
+    <!-- <th>Owner responce</th>  -->
+   
+    <tr *ngFor="let i of S "  >
+    <td>{{i.name}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.mobile}}</td>
+    <td>{{i.house}}</td>
+    <td>{{i.area}}</td>
+    <td>{{i.Rent}}</td>
+    <td>
+        <input type="text" name="details" class="form-control"  #ref>
+        <button  (click)="senddata(ref.value,i.email)"  class="btn btn-primary">send </button>
+    </td>
+    <!-- <td><h4  class="text-danger">{{i.responce}}</h4></td> -->
+</tr>
+
+  
+
+</table>
+
+<button class="btn btn-primary" routerLink="/profile2" >back</button>
+
+<router-outlet></router-outlet>
+</div>

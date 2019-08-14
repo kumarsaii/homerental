@@ -1,0 +1,77 @@
+<!-- <div class="container bg-"
+>
+<div class="row">
+    <div class="col-md-3"></div>
+        <div class="col-md-4">
+         
+            <form    #ref4="ngForm" (ngSubmit)="login4(ref4.value)" >
+                <h3 class="text-primary"> <u><b> TenantLogin :</b></u></h3>
+          <div class="from-group">
+                <label class="form-control-label" for=""><h3 class="text-primary" >Email :</h3> </label>
+            <input type="text"placeholder="enter ur email" class="from-control-input"  name="email" ngModel>
+          
+          
+            <label class="form-control-label" for=""><h3 class="text-primary" >Password :</h3> </label>
+            <input type="password"placeholder="enter ur password" class="form-control-input"  name="password" ngModel><br>
+            
+            <button type="submit" class="btn btn-primary mt-3 "  >
+                submit
+            </button><br>
+           new user? <a routerLink="/register2">Register</a>
+          </div>
+        </form>
+        </div>
+       
+            <div class="col-md-5">
+                <img  height="300px" width="400px"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7_Nt1Ys4io4TmkvjX2-Qic8LomzSd2v4g2CxkBjlfZ7RRFEWC" alt="">
+            </div>
+        </div>
+        
+    </div> -->
+
+
+    <div class="container">
+
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-heading">
+            <h2 class="text-center">TenantLogin </h2>
+        </div>
+        <hr />
+        <div class="modal-body">
+            <form action="" #ref4="ngForm" (ngSubmit)="login4(ref4.value)">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-user"></span>
+                        </span>
+                        <input type="text" class="form-control" name="email" ngModel placeholder="User Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
+                        </span>
+                        <input type="password" class="form-control" name="password" ngModel placeholder="Password" />
+
+                    </div>
+
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-success btn-lg">Login</button>
+                   <h6 class="text-info">new user?</h6> <a routerLink="/register2" class="text-info">Register</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+    </div>
+        
+        <router-outlet></router-outlet>
+    

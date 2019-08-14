@@ -1,0 +1,40 @@
+
+<div class="container mt-5">
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-3">
+
+
+<h3><b><u>Payments:</u></b></h3>
+<form #ref="ngForm" (ngSubmit)="payments(ref.value)">
+  <label for="">name</label><br>
+  <input type="text" name="name" ngModel><br>
+
+  <label for="">email</label><br>
+  <input type="text" name="email" [(ngModel)]=email readonly  ><br>
+
+  <label for="">acount number</label><br>
+  <input type="text" name="account" ngModel><br>
+  
+  <label for="">mobile</label><br>
+  <input type="number" name="mobile" ngModel ><br>
+  
+  <label for="">IFSC code</label><br>
+  <input type="number" name="ifsc" ngModel><br>
+  
+  <label for="">send money</label><br>
+  <input type="number" name="number" ngModel><br>
+  
+<button class="btn btn-dark" type="submit" >submit</button> 
+</form>
+</div>
+<div class="col-md-3">
+  <img>
+</div>
+<div class="col-md-2">
+</div>
+<div class="col-md-2">
+</div>
+<button class="btn btn-dark mt-5" routerLink="/profile1" >back</button>
+<router-outlet></router-outlet>
+</div>

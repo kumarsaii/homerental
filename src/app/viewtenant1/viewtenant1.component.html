@@ -1,0 +1,61 @@
+
+ <!-- <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+    <div class="card">
+
+         <h4 class="text-dark">The Responce From Tenant Is 
+        <h4  class="text-danger">  <b><u>"{{m}}"</u></b></h4>
+           </h4> 
+        
+    </div>  -->
+    <!-- <input type="text" #ref2  ngModel>
+    <button (click)="senddata(ref2.value)" class="btn btn-dark" >{{c?"sent":"send"}}</button>
+                                   -->
+    <!-- </div>
+    <div class="col-md-3"></div>
+</div> -->
+<div class="container">
+   <table class="table mt-5 " border="3">
+    <thead class="text-white bg-dark" >
+        <th>name</th>
+        <th>Email</th>
+        <th>mobile</th>
+        <th>city </th>
+        <th>date of birth</th>
+        <th>responce from tenant</th>
+        <th>UR responce</th>
+    </thead>
+   
+    <tr  *ngFor="let z of data">
+            <td>{{z.name}}</td>
+            <td>{{z.email}}</td>
+            <td>{{z.mobile}}</td>
+            <td>{{z.city}}</td>
+            <td>{{z.dob}}</td>
+            <td class="text-danger">{{z.response}}</td>
+            <td>
+       <form #ref="ngForm" (ngSubmit)="sendownermsg(ref.value,z.email)"> 
+            
+        <h5>To tenant:</h5>
+         <input type="text" name="tenantemail" [(ngModel)]="z.email" readonly ngModel><br>
+        <h5>Responce</h5>
+         <input type="text" ngModel name="responce" #ref class="form-control"  >
+            <button type="submit"   class="btn btn-dark">send </button>
+        </form> 
+         </td><br>
+    </tr>
+
+
+   </table>
+
+    
+    
+    
+    
+ 
+<div class="mt-5">
+<button class="btn btn-dark" routerLink="/profile1" >back</button>
+</div>
+<router-outlet></router-outlet>
+</div>

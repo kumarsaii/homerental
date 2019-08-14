@@ -1,0 +1,73 @@
+<!-- <div class="container bg-info">
+<div class="row">
+    <div class="col-md-4">
+     
+    </div>
+    <div  class="col-md-4">
+        
+        <form #ref="ngForm" (ngSubmit)="login(ref.value)" >
+  
+                <h3 class="text-dark"> <u><b> OwnerLogin :</b></u></h3>
+                <div class="form-group">
+            <label class="text-dark" class="form-control-label" for="x"><h3>Email :</h3> </label>
+            <input type="text" placeholder="enter ur email"   id="x" class="form-control-input"  name="email" ngModel>
+           
+            <label class="text-dark"class="form-control-label"  for="y"><h3>password</h3> </label>
+            <input type="password" placeholder="enter ur password"   class="form-control-input" id="y" name="password" ngModel><br>
+        </div>
+            <button type="submit" class="btn btn-dark "><h6 class="text-white">submit</h6></button><br>
+           new user? <a routerLink="/regiter" class="text-dark">Register</a>
+        
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+    <router-outlet></router-outlet>
+
+
+
+
+
+</div>
+</div>
+
+ -->
+
+
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-heading">
+            <h2 class="text-center"> Owner Login</h2>
+        </div>
+        <hr />
+        <div class="modal-body">
+            <form action="" #ref="ngForm" (ngSubmit)="login(ref.value)">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-user"></span>
+                        </span>
+                        <input type="text" class="form-control" name="email" ngModel placeholder="User Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
+                        </span>
+                        <input type="password" class="form-control" name="password" ngModel placeholder="Password" />
+
+                    </div>
+
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-success btn-lg">Login</button><br>
+                    new user? <a routerLink="/regiter" class="text-dark">Register</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

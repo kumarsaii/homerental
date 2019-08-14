@@ -1,0 +1,29 @@
+
+<div class="container mt-5">
+<table class="table table-responsive" border="2" >
+   <thead class="bg-dark text-white">
+    <th>name</th>
+    <th>email</th>
+    <th>mobile</th>
+    <th>house</th>
+    <th>location</th>
+    <th>rent</th>
+    <th></th>
+</thead>
+   
+   <tr *ngFor="let i of data">
+    <td>{{i.name}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.mobile}}</td>
+    <td>{{i.house}}</td>
+    <td>{{i.area}}</td>
+    <td>{{i.Rent}}</td>
+    <td><button (click)="delete(i.email)" class="btn btn-danger" >delete</button></td>
+</tr>
+
+
+</table>
+<a routerLink="/profile1"><button class="btn btn-dark" >Back</button></a>
+    <router-outlet></router-outlet>
+</div> 
+

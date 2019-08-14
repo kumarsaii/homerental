@@ -1,0 +1,38 @@
+
+<div class="container mt-5">
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="card">
+           
+        <a class="text-dark" routerLink="/edit1"><b>Profile</b></a>
+        <a class="text-dark"  routerLink="/viewhouses1"><b>View Houses</b></a>
+        <a class="text-dark"  routerLink="/viewtenant1"><b> Tenant Responce </b></a>
+       
+    
+        <a class="text-dark"  routerLink="/payments1"><b>Payments</b></a>
+        <a class="text-dark"  routerLink="/paymentshistory1"><b>payment history</b></a>
+       
+        <a class="text-dark"  (click)=logout()><b>Logout</b></a>
+
+
+
+    
+    </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+        <div class="text-center ">
+        
+        <button class="btn btn-dark" routerLink="/addnewhouse1" >Add New Houses</button>
+    </div><br>
+    <div class="text-center" >
+    <img src="assets/keys.jpg" width="200px" >
+</div>
+</div>
+    </div>
+     
+   
+    <router-outlet></router-outlet>
+</div>
+</div>
+

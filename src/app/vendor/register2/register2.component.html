@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+            
+ <form #ref1="ngForm" (ngSubmit)="change1(ref1.value)" >
+        
+        <h3 class="text-primary"> <u><b>Registration :</b></u></h3>
+       <div class="from-group">
+           <label class="text-primary" for="x">name :</label><br>
+           <input type="text"placeholder="enter ur name"   class="form-control" name="name" id="x"  ngModel ><br>
+         
+           <label class="text-primary" for="y"><h6 class="text-danger">**</h6>Email :</label><br>
+           
+           <input type="text"placeholder="enter ur email"  class="form-control" name="email" id="y" ngModel #mail="ngModel" required  ><br>
+           <label *ngIf="mail.invalid &&(mail.dirty || mail.touched)">
+            <div class="text-danger">**email is mandiatory</div>
+          </label><br>
+
+
+
+
+
+
+           <label class="text-primary" for="z">mobile :</label><br>
+           <input type="number"placeholder="enter ur number"  class="form-control" id="z" name="mobile" ngModel  ><br>
+          
+           <label class="text-primary" for="zy">city :</label><br>
+           <input type="text"placeholder="enter ur city"  class="form-control" id="zy" name="city" ngModel  ><br>
+          
+
+
+           <label class="text-primary" for="a">DOB : </label><br>
+           <input type="date"placeholder="enter ur birth date"  class="form-control" id="a"  name="dob" ngModel  ><br>
+          
+           <label class="text-primary" for="b">password :</label><br>
+           <input type="text"placeholder="enter ur password"   class="form-control" id="b" name="password" ngModel #password="ngModel" required ><br>
+           <label *ngIf="password.invalid &&(password.dirty || password.touched)">
+            <div class="text-danger">**password is mandiatory</div>
+          </label><br>
+          
+          
+          
+          
+          
+          
+          
+           <button class=" btn btn-primary text-white" type="submit" >register</button>
+        </div>
+        </form>
+    </div>
+    <div class="col-md-4 mt-5"></div>
+    <button class="btn btn-primary" routerLink="/login2">click here to login</button>
+    <router-outlet></router-outlet>
+</div>

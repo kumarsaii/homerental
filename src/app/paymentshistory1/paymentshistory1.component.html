@@ -1,0 +1,34 @@
+
+<div class="container mt-5">
+
+
+
+<h3><b><u>payment history:</u></b></h3>
+
+<table class="table table-responsive" >
+    <thead>
+        <th>name</th>
+        <th>acount number</th>
+        <th>mobile</th>
+        <th>IFSC Code</th>
+        <th>send money</th>
+        <th></th>
+    </thead>
+    <tr *ngFor="let i of data">
+        <td>{{i.email}}</td>
+        <td>{{i.account}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.ifsc}}</td>
+        <td>{{i.number}}</td>
+        <td><button (click)="delete(i.email)" class="btn btn-danger" >delete</button></td>
+        
+          
+    </tr>
+</table>
+<button class="btn btn-dark" routerLink="/profile1" > back</button>
+
+
+</div>
+
+
+
