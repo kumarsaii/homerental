@@ -38,6 +38,12 @@ import { AdminprofileComponent } from './adminprofile/adminprofile.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { OwnermessageComponent } from './ownermessage/ownermessage.component';
 import { AuthorizationserviceService } from './authorizationservice.service';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { EnterotpComponent } from './enterotp/enterotp.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { Forgotpassword2Component } from './forgotpassword2/forgotpassword2.component';
+import { Enterotp2Component } from './enterotp2/enterotp2.component';
+import { Resetpassword2Component } from './resetpassword2/resetpassword2.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +97,18 @@ import { AuthorizationserviceService } from './authorizationservice.service';
     PagenotfoundComponent,
    
     OwnermessageComponent,
+   
+    ForgotpasswordComponent,
+   
+    EnterotpComponent,
+   
+    ResetpasswordComponent,
+   
+    Forgotpassword2Component,
+   
+    Enterotp2Component,
+   
+    Resetpassword2Component,
    
     
   ],

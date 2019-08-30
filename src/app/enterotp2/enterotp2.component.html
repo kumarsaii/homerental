@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <form #ref="ngForm" (ngSubmit)="verify1(ref.value)" >
+                <label for="">verify otp</label>
+                <input type="number" name="OTP" ngModel>
+                <button class="btn btn-primary" type="submit">verify</button>
+            </form>
+            </div>
+            <router-outlet></router-outlet>
+    </div>
+</div>

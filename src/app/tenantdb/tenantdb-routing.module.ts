@@ -8,6 +8,9 @@ import { Logout2Component } from '../logout2/logout2.component';
 import { Wallet2Component } from '../wallet2/wallet2.component';
 import { Searchnewhouse2Component } from '../searchnewhouse2/searchnewhouse2.component';
 import { OwnermessageComponent } from '../ownermessage/ownermessage.component';
+import { Forgotpassword2Component } from '../forgotpassword2/forgotpassword2.component';
+import { Enterotp2Component } from '../enterotp2/enterotp2.component';
+import { Resetpassword2Component } from '../resetpassword2/resetpassword2.component';
 
 const routes: Routes = [
   {
@@ -38,7 +41,19 @@ const routes: Routes = [
   {
     path: "ownermessage",
     component: OwnermessageComponent
-  }];
+  },
+  {
+    path:"forgotpassword2",
+    component:Forgotpassword2Component
+  },
+{
+  path:"enterotp2",
+  component:Enterotp2Component
+},
+{
+  path:"resetpassword2",
+  component:Resetpassword2Component
+}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

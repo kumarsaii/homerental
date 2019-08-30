@@ -535,7 +535,138 @@ ownerroutes.delete('/delete/:email',(req,res,next)=>
     
 })
 
+
+//forgot password
+
+
+
+const accountSid = 'ACcb35fd5591a6b6a1f76e3f98127f236b';
+const authToken = '8f79c47b573189e8c2c948f8742136e3';
+const client = require('twilio')(accountSid, authToken);
+
+
+
+ownerroutes.post('/forgotpassword',(req,res,)=>{
+    console.log("owner"+req.body)
+    dbo=getDb()
+    dbo.collection("saikumarcollection").find({email:req.body.email}).toArray((err,userArray)=>{
+        if(err){
+          console.log(err)
+          
+        }
+       
+        else{
+            if(userArray.length===0){
+                res.json({message:"user not found"})
+            }
+        
+            else{
+                   console.log("user"+userArray)
+                jwt.sign({email:userArray[0].email},secretkey,{expiresIn:"7d"},(err,token)=>{
+                    if(err){
+                   console.log(err)
+                    }
+                    else{
+                        var OTP=Math.floor(Math.random()*99999)+11111;
+                        console.log("new"+OTP)
+                        
+                        client.messages.create({
+                            body: 'Hello from Node',
+                            from: '+12054303954', // From a valid Twilio number
+                            to: '+919912399462',  // Text this number
+  
+                        })
+                        .then((message) => {
+                            dbo.collection('otpcollection').insertOne({
+                                OTP:OTP,
+                                email:userArray[0].email,
+                                OTPGeneratedTime:new Date().getTime()+15000
+                        },(err,success)=>{
+                            if(err){
+                                console.log(err)
+                            }
+                            else{                                        
+                                res.json({"message":"user found",
+                                    "token":token,
+                                    "OTP":OTP,
+                                    "email":userArray[0].email
+                                })
+                            }
+                        })
+                        });
+
+                    }
+                    
+                })
+            }
+        }
+    })
+})
+
+
+
+
+//verify OTP
+ownerroutes.post('/verifyotp',(req,res,next)=>{
+    console.log(req.body)
+    dbo=getDb()
+    console.log(new Date().getTime())
+    var currentTime=new Date().getTime()
+    dbo.collection('otpcollection').find({"OTP":req.body.OTP}).toArray((err,OTPArray)=>{
+        if(err){
+            next(err)
+        }
+        else if(OTPArray.length===0){
+            res.json({"message":"invalidOTP"})
+        }
+        else if(OTPArray[0].OTPGeneratedTime < req.body.currentTime){
+            res.json({"message":"invalidOTP"})
+        }
+        else{
+            
+            dbo.collection('otpcollection').deleteOne({OTP:req.body.OTP},(err,success)=>{
+                if(err){
+                    next(err);
+                }
+                else{
+                    console.log(OTPArray)
+                    res.json({"message":"verifiedOTP"})
+                }
+            })
+        }
+    })
+})
+
+//changing password
+ownerroutes.put('/resetpassword',(req,res)=>{
+    console.log(req.body)
+    dbo=getDb()
+    bcrypt.hash(req.body.password,6,(err,hashedpassword)=>{
+        if (err) {
+                      console.log(err)
+        } else {
+            console.log(hashedpassword)
+            dbo.collection("saikumarcollection").updateOne({email:req.body.email},{$set:{
+                password:hashedpassword
+            }},(err,success)=>{
+                if(err){
+                    console.log(err)
+                }
+                else{
+                    res.json({"message":"password changed"})
+                }
+            }) 
+        }
+    })
+    
+})
+
+
+
+
+
 //exporting owner routes
 
 module.exports=ownerroutes;
 
+      

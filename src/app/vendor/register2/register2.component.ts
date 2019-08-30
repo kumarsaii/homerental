@@ -20,11 +20,11 @@ export class Register2Component implements OnInit {
   ///form validation
    if(x.email==0)
    {
-     alert("Email is required")
+     alert("**Email is required")
    }
    else if(x.password==0)
    {
-     alert("password is required")
+     alert("**password is required")
    }
 
 
@@ -33,9 +33,10 @@ export class Register2Component implements OnInit {
   this.http.post("tenant/registerdetails",x).subscribe(res=>
     {
       alert(res['message'])
+      this.router.navigate(['/login2'])
     })
 
-    //this.router.navigate(['/login2'])
+    
     
   }
  }

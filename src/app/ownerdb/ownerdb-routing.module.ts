@@ -9,38 +9,72 @@ import { Payments1Component } from '../payments1/payments1.component';
 import { Paymentshistory1Component } from '../paymentshistory1/paymentshistory1.component';
 import { Logout1Component } from '../logout1/logout1.component';
 import { Addnewhouse1Component } from '../addnewhouse1/addnewhouse1.component';
+import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.component';
+import { EnterotpComponent } from '../enterotp/enterotp.component';
+import { ResetpasswordComponent } from '../resetpassword/resetpassword.component';
 
 
 
-const routes: Routes = [{path:"profile1",
-                          component:Profile1Component},
-                        {path:"edit1",
-                         component:Edit1Component},
-                         {path:"view1",
-                          component:View1Component},
-                          {path:"viewhouses1",
-                           component:Viewhouses1Component},
-                        {path:"viewtenant1",
-                         component:Viewtenant1Component},
-                         {path:"payments1",
-                         component:Payments1Component},
-                         {path:"paymentshistory1",
-                        component:Paymentshistory1Component},
-                        {path:"logout1",
-                         component:Logout1Component},
-                         {path:"addnewhouse1",
-                          component:Addnewhouse1Component }
+const routes: Routes = [{
+  path: "profile1",
+  component: Profile1Component
+},
+{
+  path: "edit1",
+  component: Edit1Component
+},
+{
+  path: "view1",
+  component: View1Component
+},
+{
+  path: "viewhouses1",
+  component: Viewhouses1Component
+},
+{
+  path: "viewtenant1",
+  component: Viewtenant1Component
+},
+{
+  path: "payments1",
+  component: Payments1Component
+},
+{
+  path: "paymentshistory1",
+  component: Paymentshistory1Component
+},
+{
+  path: "logout1",
+  component: Logout1Component
+},
+{
+  path: "addnewhouse1",
+  component: Addnewhouse1Component
+},
+{
+  path: "fogotpassword",
+  component: ForgotpasswordComponent
+},
+{
+  path: "enterotp",
+  component: EnterotpComponent
+}
+,
+{
+  path: "resetpassword",
+  component: ResetpasswordComponent
+}
 
-                        
-                                
-                                
-                                
-                                                   ]
-                         
-                            
-                         
-                         
-                       
+
+
+
+
+]
+
+
+
+
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

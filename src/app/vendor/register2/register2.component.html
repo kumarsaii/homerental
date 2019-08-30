@@ -33,7 +33,7 @@
            <input type="date"placeholder="enter ur birth date"  class="form-control" id="a"  name="dob" ngModel  ><br>
           
            <label class="text-primary" for="b">password :</label><br>
-           <input type="text"placeholder="enter ur password"   class="form-control" id="b" name="password" ngModel #password="ngModel" required ><br>
+           <input type="password"placeholder="enter ur password"   class="form-control" id="b" name="password" ngModel #password="ngModel" required ><br>
            <label *ngIf="password.invalid &&(password.dirty || password.touched)">
             <div class="text-danger">**password is mandiatory</div>
           </label><br>

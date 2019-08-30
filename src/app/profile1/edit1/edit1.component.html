@@ -1,5 +1,5 @@
 <div class="container">
-<table class="table bg-dark mt-5"   border="3">
+<table class="table table-responsive bg-dark mt-5"   border="3">
     <thead class="text-white ">
         <th>name</th>
         <th>mobile</th>
@@ -25,24 +25,24 @@
 <div *ngIf=!b>
         <form  #ref="ngForm"  (ngSubmit)="savedata(ref.value)">
           <div class="form-group">
-            <label for="n">Name</label>
-            <input type="text" name="name" id="n"   [(ngModel)]="objecttoupdate.name">
+            <label for="n">Name</label><br>
+            <input type="text" name="name" id="n"   [(ngModel)]="objecttoupdate.name"><br>
           </div>
-          <div class="form-group">
-              <label for="e">Email</label>
-              <input type="text" name="email" id="e"  [(ngModel)]="objecttoupdate.email">
+          <div class="form-group"><br>
+              <label for="e">Email</label><br>
+              <input type="text" name="email" id="e"  [(ngModel)]="objecttoupdate.email"><br>
             </div>
             <div class="form-group">
-                <label for="m">Mobile</label>
-                <input type="number" name="mobile" id="m"  [(ngModel)]="objecttoupdate.mobile">
+                <label for="m">Mobile</label><br>
+                <input type="number" name="mobile" id="m"  [(ngModel)]="objecttoupdate.mobile"><br>
               </div>
               <div class="form-group">
-                  <label for="c">City</label>
-                  <input type="text" name="city" id="c"  [(ngModel)]="objecttoupdate.city">
+                  <label for="c">City</label><br>
+                  <input type="text" name="city" id="c"  [(ngModel)]="objecttoupdate.city"><br>
                 </div>
                 <div class="form-group">
-                    <label for="b">Birth date</label>
-                    <input type="date" name="dob" id="b"  [(ngModel)]="objecttoupdate.dob">
+                    <label for="b">Birth date</label><br>
+                    <input type="date" name="dob" id="b"  [(ngModel)]="objecttoupdate.dob"><br>
                   </div>
       <button class="btn btn-dark" type="submit" >save details</button>
       

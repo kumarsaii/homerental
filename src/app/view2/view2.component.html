@@ -20,7 +20,7 @@
             <td>{{i.mobile}}</td>
             <td>{{i.city}}</td>
             <td>{{i.dob}}</td>
-            <td><button type="submit" class="btn btn-primary" (click)="updateData(i)">edit details</button></td>
+            <td><button type="submit" class="btn btn-primary" (click)="updateData(i)"><h6 class="text-white">edit </h6></button></td>
     </tr>
   </table>
 
@@ -28,24 +28,24 @@
   <div *ngIf=!b>
   <form  #ref="ngForm"  (ngSubmit)="savedata(ref.value)">
     <div class="form-group">
-      <label for="n">Name</label>
-      <input type="text" name="name" id="n"   [(ngModel)]="objecttoupdate.name">
+      <label for="n">Name</label><br>
+      <input type="text" name="name" id="n"   [(ngModel)]="objecttoupdate.name"><br>
     </div>
     <div class="form-group">
-        <label for="e">Email</label>
-        <input type="text" name="email" id="e"  [(ngModel)]="objecttoupdate.email">
+        <label for="e">Email</label><br>
+        <input type="text" name="email" id="e"  [(ngModel)]="objecttoupdate.email"><br>
       </div>
       <div class="form-group">
-          <label for="m">Mobile</label>
-          <input type="text" name="mobile" id="m"  [(ngModel)]="objecttoupdate.mobile">
+          <label for="m">Mobile</label><br>
+          <input type="text" name="mobile" id="m"  [(ngModel)]="objecttoupdate.mobile"><br>
         </div>
         <div class="form-group">
-            <label for="c">City</label>
-            <input type="text" name="city" id="c"  [(ngModel)]="objecttoupdate.city">
+            <label for="c">City</label><br>
+            <input type="text" name="city" id="c"  [(ngModel)]="objecttoupdate.city"><br>
           </div>
           <div class="form-group">
-              <label for="b">Birth date</label>
-              <input type="text" name="dob" id="b"  [(ngModel)]="objecttoupdate.dob">
+              <label for="b">Birth date</label><br>
+              <input type="text" name="dob" id="b"  [(ngModel)]="objecttoupdate.dob"><br>
             </div>
 <button class="btn btn-primary" type="submit" >save details</button>
 

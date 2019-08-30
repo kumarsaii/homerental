@@ -6,6 +6,7 @@ import { ProfileComponent } from '../login/profile/profile.component';
 import { Profile1Component } from '../ownerdb/profile1/profile1.component';
 import { NotificationComponent } from '../notification/notification.component';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
+import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.component';
 
  const routes: Routes = [{
 //    path: '',
@@ -22,6 +23,9 @@ import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 {
   path: "profile1",
   component: Profile1Component
+},{
+  path: "forgotpassword",
+  component: ForgotpasswordComponent
 },
 {
   path: "notification",
